@@ -1,23 +1,37 @@
-import { getAllUsers } from "../api/api";
-
 import { useState, useEffect } from "react";
+import { toast } from "react-toastify";
+import { updateFollowStatus } from "../api/api";
 
+import { getAllUsers } from "../api/api";
 import { TweetsList } from "../components/TweetsList/TweetsList";
+import { GoBackBtn } from "../components/GoBackBtn/GoBackBtn";
 
 export const Tweets = () => {
   const [users, setUsers] = useState([]);
 
-  // eslint-disable-next-line no-unused-vars
-  const [error, setError] = useState(null);
-
+  const handleToogleStatus = async (id) => {
+    try {
+      const updateUser = await updateFollowStatus(id);
+      const updateAllUsers = users.map((user) => {
+        if (user.id === id) {
+          return updateUser;
+        }
+        return user;
+      });
+      setUsers(updateAllUsers);
+      toast.done("Well done");
+    } catch (error) {
+      toast.error(error);
+    }
+  };
   useEffect(() => {
     const fetchUsers = async () => {
       try {
         const results = await getAllUsers();
-        console.log(results);
-        setUsers(...results);
+
+        setUsers(results);
       } catch (error) {
-        setError(error);
+        toast.error(error);
       }
     };
     fetchUsers();
@@ -25,9 +39,12 @@ export const Tweets = () => {
 
   return (
     <>
+      <GoBackBtn />
       <h1>Tweets </h1>
 
-      {users?.length > 0 && <TweetsList users={users} />}
+      {users?.length > 0 && (
+        <TweetsList users={users} handleToogleStatus={handleToogleStatus} />
+      )}
     </>
   );
 };

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Item = styled.li`
   width: 300px;
@@ -23,4 +23,8 @@ export const PosterImg = styled.img`
 export const TitleMovie = styled.h2`
   padding: 5px;
   text-align: center;
+`;
+
+export const Button = styled.button`
+  background-color: #ebd8ff;
 `;
