@@ -15,7 +15,8 @@ export const TweetCard = ({
       <img src={avatar} alt={user} />
       <TitleMovie>{user}</TitleMovie>
       <p>tweets: {tweets}</p>
-      <p>followers: {followers}</p>
+
+      <p>followers: {new Intl.NumberFormat("en").format(followers)}</p>
       <Button onClick={() => handleToogleStatus(id)}>
         {!isFollowing ? "Follow" : "Following"}
       </Button>

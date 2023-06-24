@@ -5,7 +5,7 @@ import { Main, Wrapper } from "./Layout.styled";
 import { Suspense } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Loader from "../../Loader/Loader";
+import { Loader } from "../../Loader/Loader";
 
 export const Layout = () => {
   return (

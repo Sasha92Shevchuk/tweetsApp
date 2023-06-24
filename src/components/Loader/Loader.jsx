@@ -1,6 +1,6 @@
-import { Circles } from 'react-loader-spinner';
-import { LoaderBox } from './Loader.styled';
-const Loader = () => {
+import { Circles } from "react-loader-spinner";
+import { LoaderBox } from "./Loader.styled";
+export const Loader = () => {
   return (
     <LoaderBox>
       <Circles
@@ -15,4 +15,3 @@ const Loader = () => {
     </LoaderBox>
   );
 };
-export default Loader;
