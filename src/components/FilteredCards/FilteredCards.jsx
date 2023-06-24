@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { FilterContainer, Label, Option, Select } from "./FilteredCards.styled";
 
 export const FilteredCards = ({ onFilterUsers, setIsFollowing }) => {
   const handleFilterChange = (event) => {
@@ -8,11 +9,14 @@ export const FilteredCards = ({ onFilterUsers, setIsFollowing }) => {
   };
 
   return (
-    <select onChange={handleFilterChange}>
-      <option value={""}>All Users</option>
-      <option value={true}>Following</option>
-      <option value={false}>Not Following</option>
-    </select>
+    <FilterContainer>
+      <Label htmlFor="filter">Filter by status: </Label>
+      <Select id="filter" onChange={handleFilterChange}>
+        <Option value={""}>Select all</Option>
+        <Option value={true}>Following</Option>
+        <Option value={false}>Not Following</Option>
+      </Select>
+    </FilterContainer>
   );
 };
 

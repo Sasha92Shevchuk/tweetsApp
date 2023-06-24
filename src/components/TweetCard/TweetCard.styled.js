@@ -90,9 +90,15 @@ export const Button = styled.button`
   padding: 14px 28px;
   border-radius: 10px;
   margin-top: 26px;
+  color: #373737;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.22;
   background-color: ${(props) => (props.isFollowing ? "#5CD3A8" : "#ebd8ff")};
   transition: all 250ms ease;
   cursor: pointer;
+  border: none;
+  box-shadow: 0px 3.4369285106658936px 3.4369285106658936px 0px #00000040;
 
   :hover,
   :focus {

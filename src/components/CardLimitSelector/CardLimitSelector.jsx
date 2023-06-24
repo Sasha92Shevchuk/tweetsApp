@@ -1,4 +1,10 @@
 import PropTypes from "prop-types";
+import {
+  Label,
+  Option,
+  Select,
+  SelectContainer,
+} from "./CardLimitSelector.styled";
 
 export const CardLimitSelector = ({ onLimitChange }) => {
   const handleChange = (e) => {
@@ -7,14 +13,14 @@ export const CardLimitSelector = ({ onLimitChange }) => {
   };
 
   return (
-    <div>
-      <label htmlFor="cardLimit">Number of cards per page:</label>
-      <select id="cardLimit" onChange={handleChange}>
-        <option value="3">3</option>
-        <option value="6">6</option>
-        <option value="9">9</option>
-      </select>
-    </div>
+    <SelectContainer>
+      <Label htmlFor="cardLimit">Set the quantity of cards:</Label>
+      <Select id="cardLimit" onChange={handleChange}>
+        <Option value="3">3</Option>
+        <Option value="6">6</Option>
+        <Option value="9">9</Option>
+      </Select>
+    </SelectContainer>
   );
 };
 

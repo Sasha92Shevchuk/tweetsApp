@@ -1,5 +1,10 @@
+import { AiOutlineArrowLeft } from "react-icons/ai";
 import { BackLink } from "./GoBackBtn.styled";
 
 export const GoBackBtn = () => {
-  return <BackLink to="/"> &larr; Go Back</BackLink>;
+  return (
+    <BackLink to="/">
+      <AiOutlineArrowLeft /> Go Back
+    </BackLink>
+  );
 };

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SelectContainer = styled.div`
+export const FilterContainer = styled.div`
   display: flex;
   gap: 5px;
   align-items: flex-end;
@@ -13,6 +13,7 @@ export const Label = styled.label`
 `;
 
 export const Select = styled.select`
+  width: 106px;
   padding: 8px;
   border-radius: 8px;
   border: 2px solid #471ca9;
@@ -29,6 +30,6 @@ export const Select = styled.select`
 
 export const Option = styled.option`
   background-color: #f0f0f0;
-  color: #333;
+  color: #000;
   cursor: pointer;
 `;
