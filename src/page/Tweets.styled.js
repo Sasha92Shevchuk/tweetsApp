@@ -32,10 +32,7 @@ export const LoadMore = styled.button`
   padding: 16px 21px;
   position: relative;
   text-align: center;
-  text-decoration: none;
-  transition: all 0.3s;
-  user-select: none;
-  -webkit-user-select: none;
+  transition: all 0.25s;
   touch-action: manipulation;
 
   :before {

@@ -1,18 +1,17 @@
-import { Link } from "react-router-dom";
-import { HeaderBox } from "./Header.styled";
+import { HeaderBox, List, PageLink } from "./Header.styled";
 
 export const Header = () => {
   return (
     <HeaderBox>
       <nav>
-        <ul>
+        <List>
           <li>
-            <Link to="/">Home</Link>
+            <PageLink to="/">Home</PageLink>
           </li>
           <li>
-            <Link to="/tweets">Tweets</Link>
+            <PageLink to="/tweets">Tweets</PageLink>
           </li>
-        </ul>
+        </List>
       </nav>
     </HeaderBox>
   );

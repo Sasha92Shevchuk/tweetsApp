@@ -16,5 +16,7 @@ export const BackLink = styled(NavLink)`
 
   :hover {
     transform: translateX(-10px);
+
+    color: #471ca9;
   }
 `;
