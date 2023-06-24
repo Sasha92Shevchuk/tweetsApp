@@ -8,6 +8,7 @@ import { GoBackBtn } from "../components/GoBackBtn/GoBackBtn";
 import { Loader } from "../components/Loader/Loader";
 import { CardLimitSelector } from "../components/CardLimitSelector/CardLimitSelector";
 import { FilteredCards } from "../components/FilteredCards/FilteredCards";
+import { FilterBox, LoadMore, WrapperNavigate } from "./Tweets.styled";
 
 export const Tweets = () => {
   const [users, setUsers] = useState([]);
@@ -82,19 +83,23 @@ export const Tweets = () => {
 
   return (
     <>
-      <GoBackBtn />
-      <CardLimitSelector onLimitChange={handleLimitChange} />
-      <FilteredCards
-        onFilterUsers={handleFilterUsers}
-        setIsFollowing={setIsFollowing}
-      />
+      <WrapperNavigate>
+        <GoBackBtn />
+        <FilterBox>
+          <CardLimitSelector onLimitChange={handleLimitChange} />
+          <FilteredCards
+            onFilterUsers={handleFilterUsers}
+            setIsFollowing={setIsFollowing}
+          />
+        </FilterBox>
+      </WrapperNavigate>
       {users?.length > 0 && (
         <TweetsList users={users} handleToogleStatus={handleToogleStatus} />
       )}
       {isLoading ? (
         <Loader />
       ) : (
-        <button onClick={handleLoadMore}>Load More</button>
+        <LoadMore onClick={handleLoadMore}>Load More</LoadMore>
       )}
     </>
   );

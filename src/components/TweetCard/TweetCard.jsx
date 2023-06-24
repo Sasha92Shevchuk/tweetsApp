@@ -1,6 +1,17 @@
 import PropTypes from "prop-types";
-import { Button, Item, TitleMovie } from "./TweetCard.styled";
-
+import {
+  Button,
+  Item,
+  AvatarImg,
+  AvatarImgWrapper,
+  SymbolsImg,
+  WrapperAvatar,
+  Logo,
+  TweetsNumb,
+  FollowersNumb,
+} from "./TweetCard.styled";
+import card_symbols from "../../assets/card_symbols.png";
+import logo from "../../assets/Logo.png";
 export const TweetCard = ({
   id,
   user,
@@ -12,12 +23,20 @@ export const TweetCard = ({
 }) => {
   return (
     <Item>
-      <img src={avatar} alt={user} />
-      <TitleMovie>{user}</TitleMovie>
-      <p>tweets: {tweets}</p>
+      <Logo src={logo} alt="logo" />
+      <SymbolsImg src={card_symbols} alt="symbols" />
+      <WrapperAvatar>
+        <AvatarImgWrapper>
+          <AvatarImg src={avatar} alt={user} />
+        </AvatarImgWrapper>
+      </WrapperAvatar>
 
-      <p>followers: {new Intl.NumberFormat("en").format(followers)}</p>
-      <Button onClick={() => handleToogleStatus(id)}>
+      <TweetsNumb>{tweets} tweets </TweetsNumb>
+
+      <FollowersNumb>
+        {new Intl.NumberFormat("en").format(followers)} followers
+      </FollowersNumb>
+      <Button onClick={() => handleToogleStatus(id)} isFollowing={isFollowing}>
         {!isFollowing ? "Follow" : "Following"}
       </Button>
     </Item>
