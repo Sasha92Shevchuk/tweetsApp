@@ -16,6 +16,7 @@ export const Tweets = () => {
   const [limitPage, setLimitPage] = useState(3);
   const [isLoading, setIsLoading] = useState(false);
   const [isFollowing, setIsFollowing] = useState("");
+  const [isDisabled, setIsDisabled] = useState(false);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -29,6 +30,9 @@ export const Tweets = () => {
           isFollowing,
           signal
         );
+        if (results.length === 0) {
+          setIsDisabled(true);
+        }
         setIsLoading(false);
         setUsers((prev) => [...prev, ...results]);
       } catch (error) {
@@ -99,7 +103,7 @@ export const Tweets = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <LoadMore onClick={handleLoadMore}>Load More</LoadMore>
+        !isDisabled && <LoadMore onClick={handleLoadMore}>Load More</LoadMore>
       )}
     </>
   );
