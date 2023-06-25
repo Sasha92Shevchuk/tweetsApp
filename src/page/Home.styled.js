@@ -6,7 +6,7 @@ export const Container = styled.div`
 `;
 
 export const BackgroundImage = styled.img`
-  width: 1280px;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
   border-radius: 20px;
