@@ -9,9 +9,12 @@ import {
   Logo,
   TweetsNumb,
   FollowersNumb,
+ 
 } from "./TweetCard.styled";
-import card_symbols from "../../assets/card_symbols.png";
+import card_symbols from "../../assets/picture2 1.png";
 import logo from "../../assets/Logo.png";
+
+
 export const TweetCard = ({
   id,
   user,

@@ -8,12 +8,12 @@ export const FilterContainer = styled.div`
 `;
 
 export const Label = styled.label`
-  font-size: 16px;
+  font-size: 20px;
   color: #373737;
 `;
 
 export const Select = styled.select`
-  width: 106px;
+  width: 132px;
   padding: 8px;
   border-radius: 8px;
   border: 2px solid #471ca9;

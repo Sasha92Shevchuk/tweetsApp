@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const HeaderBox = styled.header`
   display: flex;
   width: inherit;
-  padding-left: 40px;
+  margin-bottom: 25px;
   box-shadow: 0px 10px 19px -3px rgba(148, 148, 148, 1);
   border-radius: 16px;
   background: linear-gradient(
@@ -20,6 +20,7 @@ export const List = styled.ul`
   align-items: center;
   gap: 40px;
   height: 60px;
+  margin-left: 40px;
 `;
 
 export const PageLink = styled(NavLink)`

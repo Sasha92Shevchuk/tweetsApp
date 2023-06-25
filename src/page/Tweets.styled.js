@@ -5,7 +5,7 @@ export const WrapperNavigate = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 export const FilterBox = styled.div`

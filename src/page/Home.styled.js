@@ -6,9 +6,9 @@ export const Container = styled.div`
 `;
 
 export const BackgroundImage = styled.img`
-  width: 100%;
-  height: 600px;
-  object-fit: cover;
+  width: 1280px;
+  height: auto;
+  object-fit: contain;
   border-radius: 20px;
 `;
 export const Content = styled.div`

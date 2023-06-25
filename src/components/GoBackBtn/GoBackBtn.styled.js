@@ -9,7 +9,7 @@ export const BackLink = styled(NavLink)`
   margin-left: 10px;
   color: #373737;
   text-decoration: none;
-
+  font-size: 20px;
   border: none;
   cursor: pointer;
   transition: 250ms;

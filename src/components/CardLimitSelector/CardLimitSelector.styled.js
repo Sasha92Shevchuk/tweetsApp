@@ -8,7 +8,7 @@ export const SelectContainer = styled.div`
 `;
 
 export const Label = styled.label`
-  font-size: 16px;
+  font-size: 20px;
   color: #373737;
 `;
 

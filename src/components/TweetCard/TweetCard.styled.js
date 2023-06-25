@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import line from "../../assets/Rectangle.png";
+import line from "../../assets/line.svg";
 import Circle from "../../assets/circle.svg";
 
 export const Item = styled.li`
