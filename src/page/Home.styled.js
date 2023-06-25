@@ -6,20 +6,18 @@ export const Container = styled.div`
 `;
 
 export const BackgroundImage = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 600px;
   object-fit: cover;
   border-radius: 20px;
-  z-index: -1;
 `;
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  position: absolute;
+  top: 10px;
 `;
 
 export const Title = styled.h1`

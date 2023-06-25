@@ -1,6 +1,5 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const FooterBox = styled.footer`
-  padding-left: 40px;
-  margin: auto 0 20px;
+  border-top: 1px solid black;
 `;
