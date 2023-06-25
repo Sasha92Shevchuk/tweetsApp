@@ -1,21 +1,15 @@
 import styled from "styled-components";
 
-import line from "../../assets/line.svg";
-import Circle from "../../assets/circle.svg";
-
 export const Item = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   position: relative;
   width: 380px;
   height: 460px;
   border-radius: 20px;
-
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
   background: linear-gradient(
     114.99deg,
     #471ca9 -0.99%,
@@ -43,21 +37,14 @@ export const WrapperAvatar = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 178px;
-  background-image: url(${line});
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
+  margin-top: 214px;
+  position: relative;
 `;
 export const AvatarImgWrapper = styled.div`
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-image: url(${Circle});
-  background-repeat: inherit;
-  background-size: 100%;
-  background-position: center;
-  position: relative;
+  position: absolute;
 `;
 export const AvatarImg = styled.img`
   width: 62px;
@@ -70,7 +57,7 @@ export const AvatarImg = styled.img`
 `;
 
 export const TweetsNumb = styled.span`
-  margin-top: 26px;
+  margin-top: 62px;
   line-height: 1.5;
   font-size: 16px;
   color: white;

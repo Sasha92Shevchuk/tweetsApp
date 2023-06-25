@@ -9,11 +9,11 @@ import {
   Logo,
   TweetsNumb,
   FollowersNumb,
- 
 } from "./TweetCard.styled";
-import card_symbols from "../../assets/picture2 1.png";
+import card_symbols from "../../assets/picture.png";
 import logo from "../../assets/Logo.png";
-
+import line from "../../assets/line.svg";
+import circle from "../../assets/circle.svg";
 
 export const TweetCard = ({
   id,
@@ -29,7 +29,9 @@ export const TweetCard = ({
       <Logo src={logo} alt="logo" />
       <SymbolsImg src={card_symbols} alt="symbols" />
       <WrapperAvatar>
+        <img src={line} alt="line" />
         <AvatarImgWrapper>
+          <img src={circle} alt="circle" />
           <AvatarImg src={avatar} alt={user} />
         </AvatarImgWrapper>
       </WrapperAvatar>
