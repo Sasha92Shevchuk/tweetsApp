@@ -6,6 +6,7 @@ import {
   Title,
 } from "./Home.styled";
 import bg from "../assets/home_BG.jpg";
+import { Link } from "react-router-dom";
 export const Home = () => {
   return (
     <Container>
@@ -17,6 +18,10 @@ export const Home = () => {
           and view their avatars. You can also customize the number of pages
           displayed and load more pages using the `Load More` button.
         </Description>
+        <Description>
+          Click <Link to="/tweets">here</Link> to go to the tweets page.
+        </Description>
+        <Description>Be brave and support Ukraine.</Description>
       </Content>
     </Container>
   );

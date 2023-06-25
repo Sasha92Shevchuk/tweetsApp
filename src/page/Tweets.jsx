@@ -61,7 +61,7 @@ export const Tweets = () => {
 
       setUsers(filteredUsers);
 
-      toast("Tracking status updated");
+      toast.success("Tracking status updated");
     } catch (error) {
       toast.error(error);
     }
