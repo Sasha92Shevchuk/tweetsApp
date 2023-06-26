@@ -15,15 +15,7 @@ import logo from "../../assets/Logo.png";
 import line from "../../assets/line.svg";
 import circle from "../../assets/circle.svg";
 
-export const TweetCard = ({
-  id,
-  user,
-  tweets,
-  followers,
-  avatar,
-  handleToogleStatus,
-  isFollowing,
-}) => {
+export const TweetCard = ({ user, handleToogleStatus }) => {
   return (
     <Item>
       <Logo src={logo} alt="logo" />
@@ -32,28 +24,27 @@ export const TweetCard = ({
         <img src={line} alt="line" />
         <AvatarImgWrapper>
           <img src={circle} alt="circle" />
-          <AvatarImg src={avatar} alt={user} />
+          <AvatarImg src={user.avatar} alt={user.user} />
         </AvatarImgWrapper>
       </WrapperAvatar>
 
-      <TweetsNumb>{tweets} tweets </TweetsNumb>
+      <TweetsNumb>{user.tweets} tweets </TweetsNumb>
 
       <FollowersNumb>
-        {new Intl.NumberFormat("en").format(followers)} followers
+        {new Intl.NumberFormat("en").format(user.followers)} followers
       </FollowersNumb>
-      <Button onClick={() => handleToogleStatus(id)} isFollowing={isFollowing}>
-        {!isFollowing ? "Follow" : "Following"}
+      <Button
+        onClick={() => handleToogleStatus(user)}
+        isFollowing={user.isFollowing}
+      >
+        {!user.isFollowing ? "Follow" : "Following"}
       </Button>
     </Item>
   );
 };
 
 TweetCard.propTypes = {
-  id: PropTypes.string.isRequired,
-  user: PropTypes.string,
-  avatar: PropTypes.string,
-  tweets: PropTypes.number,
-  followers: PropTypes.number,
+  user: PropTypes.object.isRequired,
+
   handleToogleStatus: PropTypes.func.isRequired,
-  isFollowing: PropTypes.bool,
 };

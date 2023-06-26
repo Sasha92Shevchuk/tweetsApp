@@ -47,11 +47,11 @@ export const Tweets = () => {
     };
   }, [currentPage, limitPage, isFollowing]);
 
-  const handleToogleStatus = async (id) => {
+  const handleToogleStatus = async (updUser) => {
     try {
-      const updateUser = await updateFollowStatus(id);
+      const updateUser = await updateFollowStatus(updUser);
       const updateAllUsers = users.map((user) => {
-        if (user.id === id) {
+        if (user.id === updUser.id) {
           return updateUser;
         }
         return user;

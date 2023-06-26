@@ -10,17 +10,14 @@ export const getAllUsers = async (page, limit, isFollowing, signal) => {
   return data;
 };
 
-export const updateFollowStatus = async (id) => {
-  const response = await axios.get(`${BASE_URL}/${id}`);
-  const user = response.data;
-
+export const updateFollowStatus = async (user) => {
   const updatedUser = {
     ...user,
     isFollowing: !user.isFollowing,
     followers: user.followers + (user.isFollowing ? -1 : 1),
   };
 
-  const { data } = await axios.put(`${BASE_URL}/${id}`, updatedUser);
+  const { data } = await axios.put(`${BASE_URL}/${user.id}`, updatedUser);
 
   return data;
 };

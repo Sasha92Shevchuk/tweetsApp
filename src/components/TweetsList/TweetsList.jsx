@@ -8,7 +8,7 @@ export const TweetsList = ({ users, handleToogleStatus }) => {
       {users.map((user) => (
         <TweetCard
           key={user.id}
-          {...user}
+          user={user}
           handleToogleStatus={handleToogleStatus}
         />
       ))}
