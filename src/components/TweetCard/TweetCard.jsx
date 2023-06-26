@@ -12,8 +12,6 @@ import {
 } from "./TweetCard.styled";
 import card_symbols from "../../assets/picture.png";
 import logo from "../../assets/Logo.png";
-import line from "../../assets/line.svg";
-import circle from "../../assets/circle.svg";
 
 export const TweetCard = ({ user, handleToogleStatus }) => {
   return (
@@ -21,10 +19,13 @@ export const TweetCard = ({ user, handleToogleStatus }) => {
       <Logo src={logo} alt="logo" />
       <SymbolsImg src={card_symbols} alt="symbols" />
       <WrapperAvatar>
-        <img src={line} alt="line" />
         <AvatarImgWrapper>
-          <img src={circle} alt="circle" />
-          <AvatarImg src={user.avatar} alt={user.user} />
+          <AvatarImg
+            src={user.avatar}
+            alt={user.user}
+            width={"62px"}
+            height={"62px"}
+          />
         </AvatarImgWrapper>
       </WrapperAvatar>
 
@@ -44,7 +45,13 @@ export const TweetCard = ({ user, handleToogleStatus }) => {
 };
 
 TweetCard.propTypes = {
-  user: PropTypes.object.isRequired,
+  user: PropTypes.shape({
+    avatar: PropTypes.string.isRequired,
+    user: PropTypes.string.isRequired,
+    tweets: PropTypes.number.isRequired,
+    followers: PropTypes.number.isRequired,
+    isFollowing: PropTypes.bool.isRequired,
+  }).isRequired,
 
   handleToogleStatus: PropTypes.func.isRequired,
 };

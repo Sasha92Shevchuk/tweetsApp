@@ -33,18 +33,29 @@ export const SymbolsImg = styled.img`
   height: 168px;
 `;
 export const WrapperAvatar = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
+  height: 8px;
   margin-top: 214px;
+  background: #ebd8ff;
+  box-shadow: 0 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
+    inset 0 -1.71846px 3.43693px #ae7be3, inset 0 3.43693px 2.5777px #fbf8ff;
   position: relative;
 `;
 export const AvatarImgWrapper = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
   width: 80px;
   height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  position: absolute;
+  background-color: #ebd8ff;
+  box-shadow: inset 0 -2.19582px 4.39163px #ae7be3,
+    inset 0 4.39163px 3.29372px #fbf8ff;
 `;
 export const AvatarImg = styled.img`
   width: 62px;

@@ -1,23 +1,17 @@
 import styled from "styled-components";
+import bg from "../assets/home_BG.jpg";
 
-export const Container = styled.div`
-  position: relative;
-  color: #fff;
-`;
-
-export const BackgroundImage = styled.img`
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 20px;
-`;
 export const Content = styled.div`
+  background-image: url(${bg});
+  background-size: cover;
+  background-position: center;
+  max-width: 1280px;
+  max-height: 720px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  position: absolute;
-  top: 10px;
 `;
 
 export const Title = styled.h1`
